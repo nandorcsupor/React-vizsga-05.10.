@@ -1,11 +1,17 @@
-import React from "react";
-import "./style.css";
+import React, { useState, useEffect } from 'react';
+import './style.css';
+import NewTodo from './NewTodo.js';
+import TodoList from './TodoList.js';
 
 export default function App() {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(async () => {});
+
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <>
+      <NewTodo todos={todos} setTodos={setTodos} />
+      <TodoList todos={todos} setTodos={setTodos} />
+    </>
   );
 }
