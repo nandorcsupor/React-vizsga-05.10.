@@ -15,21 +15,21 @@ const NewTodo = ({ todos, setTodos }) => {
   return (
     <>
       <form className="row justify-content-center" onSubmit={addTodo}>
-        <label className="h2"> Todo App </label>
-        <input
-          className="form-control col-8"
-          type="text"
-          value={newTodo}
-          onChange={e => setNewTodo(e.target.value)}
-          onKeyPress={e => setNewTodo(e.target.value)}
-        />
-        <button
-          className="btn btn-success col-4"
-          type="button"
-          onClick={addTodo}
-        >
-          Hozzáadás
-        </button>
+        <label className="h2 m-2 p-2"> Todo App </label>
+        <div className="col-8">
+          <input
+            className="col-10 form-control"
+            type="text"
+            value={newTodo}
+            onChange={e => setNewTodo(e.target.value)}
+            onKeyPress={e => setNewTodo(e.target.value)}
+          />
+        </div>
+        <div className="col-4">
+          <button className="btn btn-success" type="button" onClick={addTodo}>
+            Hozzáadás
+          </button>
+        </div>
       </form>
     </>
   );
