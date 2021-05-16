@@ -26,7 +26,7 @@ const TodoList = ({ todos, setTodos }) => {
                 type="checkbox"
                 id={t.id}
                 checked={t.completed ? 'checked' : ''}
-                onClick={() => completed(t)}
+                onChange={() => completed(t)}
               />
               <label htmlFor={t.id} />
               <div className="row align-items-center">
