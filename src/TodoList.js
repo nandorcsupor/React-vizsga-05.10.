@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-const TodoList = ({ todos, setTodos, subject, setSubject }) => {
+const TodoList = ({ todos, setTodos }) => {
   const completed = t => {
     setTodos(todos.map(e => (e.id === t.id ? { ...e, completed: true } : e)));
   };

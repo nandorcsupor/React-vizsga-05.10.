@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 const NewTodo = ({ todos, setTodos }) => {
   const [newTodo, setNewTodo] = useState('');
