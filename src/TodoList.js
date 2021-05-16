@@ -22,7 +22,7 @@ const TodoList = ({ todos, setTodos }) => {
               }`}
             >
               <input
-                className="p-3 m-3"
+                className="col-1"
                 type="checkbox"
                 id={t.id}
                 checked={t.completed ? 'checked' : ''}
