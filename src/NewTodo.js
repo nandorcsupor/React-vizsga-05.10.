@@ -4,12 +4,12 @@ import { v4 as uuidv4 } from 'uuid';
 const NewTodo = ({ todos, setTodos }) => {
   const [newTodo, setNewTodo] = useState('');
 
-  const addTodo = async e => {
+  const addTodo = e => {
     const data = {
-      elem: newTodo,
-      id: uuidv4()
+      id: uuidv4(),
+      subject: newTodo,
+      completed: false
     };
-    const resp = await axios.post(`https://localhost:3000`, data);
     setTodos([...todos, data]);
     setNewTodo('');
   };
@@ -22,6 +22,7 @@ const NewTodo = ({ todos, setTodos }) => {
           type="text"
           value={newTodo}
           onChange={e => setNewTodo(e.target.value)}
+          onKeyPress={e => setNewTodo(e.target.value)}
         />
         <button
           className="btn btn-success col-4"
