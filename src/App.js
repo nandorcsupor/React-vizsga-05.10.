@@ -5,7 +5,6 @@ import TodoList from './TodoList.js';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function App() {
-  const [subject, setSubject] = useState();
   const [todos, setTodos] = useState([
     {
       id: uuidv4(),
