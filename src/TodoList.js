@@ -18,7 +18,7 @@ const TodoList = ({ todos, setTodos }) => {
               className={`list-group-item ${
                 t.completed
                   ? 'list-group-item-success'
-                  : 'list-group-item-alarm'
+                  : 'list-group-item-danger'
               }`}
             >
               <input
