@@ -33,8 +33,6 @@ export default function App() {
     }
   ]);
 
-  useEffect(async () => {});
-
   return (
     <>
       <NewTodo todos={todos} setTodos={setTodos} />
